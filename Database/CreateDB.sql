@@ -262,6 +262,3 @@ CREATE TABLE ProgramSurvey (
     Type NVARCHAR(50) -- Pre or Post
 );
 
--- ===== INITIAL SEEDING (Optional) =====
-INSERT INTO Role (RoleName) VALUES
-('Guest'), ('Member'), ('Staff'), ('Consultant'), ('Manager'), ('Admin');
