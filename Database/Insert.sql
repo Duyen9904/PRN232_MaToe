@@ -31,19 +31,6 @@ INSERT INTO [dbo].[System.UserAccount] (UserName, [Password], FullName, Email, P
 ('ktaylor', HASHBYTES('SHA2_256', 'taylor789'), 'Karen Taylor', 'karen.taylor@example.com', '012-345-6789', 'EMP010', 1, '2024-02-01', 'APP001', 'System', '2024-02-01', 'System', 1);
 
 -- Blog table data
-INSERT INTO Blog (Title, Content, AuthorId, CreatedAt) VALUES
-('Understanding Child Development', 'This article examines key milestones in child development from ages 0-5...', 3, '2024-02-05'),
-('Effective Parenting Techniques', 'Learn about positive discipline strategies for children of all ages...', 4, '2024-02-08'),
-('Educational Activities for Toddlers', 'Simple and engaging activities to boost your toddler''s cognitive development...', 5, '2024-02-12'),
-('Adolescent Mental Health', 'Recognizing signs of mental health issues in teenagers and how to help...', 6, '2024-02-15'),
-('Building Strong Family Relationships', 'Tips for fostering healthy communication and bonds within your family...', 3, '2024-02-18'),
-('Nutrition for Growing Children', 'Essential nutrients and meal planning for children''s optimal development...', 7, '2024-02-21'),
-('Managing Screen Time', 'Setting healthy boundaries for technology use in children and teenagers...', 4, '2024-02-24'),
-('Supporting Your Child''s Education', 'How parents can be involved in their children''s academic success...', 5, '2024-02-27'),
-('Preparing for Parenthood', 'What expectant parents need to know before welcoming a new child...', 6, '2024-03-01'),
-('Bullying Prevention Strategies', 'Understanding, identifying, and addressing bullying in schools...', 7, '2024-03-04');
-
--- BlogMinhLH table data
 INSERT INTO BlogMinhLH (Title, Summary, Content, AuthorId, CreatedAt, UpdatedAt, Status, Views, Tags) VALUES
 ('Early Childhood Education Trends', 'Exploring latest developments in early childhood education methodologies', 'This comprehensive article examines current trends in early childhood education, including play-based learning, outdoor education, and technology integration...', 3, '2024-02-10', '2024-02-11', 'Published', 1250, 'education,childhood,trends'),
 ('Navigating Teen Social Media Use', 'Guidelines for parents on managing teen social media consumption', 'Social media platforms present unique challenges for parents of teenagers. This article provides practical advice on setting boundaries, monitoring usage, and having productive conversations...', 4, '2024-02-15', '2024-02-16', 'Published', 982, 'teenagers,social media,parenting'),

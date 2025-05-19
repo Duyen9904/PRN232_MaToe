@@ -50,14 +50,6 @@ CREATE TABLE [User] (
 );
 
 -- ===== BLOG & ARTICLES =====
-CREATE TABLE Blog (
-    BlogId INT PRIMARY KEY IDENTITY,
-    Title NVARCHAR(200),
-    Content NVARCHAR(MAX),  
-    AuthorId INT FOREIGN KEY REFERENCES [User](UserId),
-    CreatedAt DATETIME DEFAULT GETDATE()
-);
-
 CREATE TABLE BlogMinhLH (
     BlogMinhLHId INT PRIMARY KEY IDENTITY,  
     Title NVARCHAR(200),                   
@@ -72,8 +64,8 @@ CREATE TABLE BlogMinhLH (
 );
 
 -- ===== ONLINE COURSES =====
-CREATE TABLE Course (
-    CourseId INT PRIMARY KEY IDENTITY,
+CREATE TABLE CourseDuyenCTT (
+    CourseDuyenCTTId INT PRIMARY KEY IDENTITY,
     Title NVARCHAR(200),
     Description NVARCHAR(MAX),
     TargetGroup NVARCHAR(100), -- học sinh, sinh viên, phụ huynh, giáo viên, etc.
@@ -83,7 +75,7 @@ CREATE TABLE Course (
 CREATE TABLE CourseEnrollmentDuyenCTT (
     EnrollmentDuyenCTTId INT PRIMARY KEY IDENTITY,
     UserId INT FOREIGN KEY REFERENCES [User](UserId),
-    CourseId INT FOREIGN KEY REFERENCES Course(CourseId),
+    CourseId INT FOREIGN KEY REFERENCES CourseDuyenCTT(CourseDuyenCTTId),
     EnrolledAt DATETIME DEFAULT GETDATE(),
     Progress INT DEFAULT 0, -- percentage
     CompletedAt DATETIME NULL,
