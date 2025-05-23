@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrugPrevention.Repositories.DuyenCTT", "DrugPrevention.Repositories.DuyenCTT\DrugPrevention.Repositories.DuyenCTT.csproj", "{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrugPrevention.Services.DuyenCTT", "DrugPrevention.Services.DuyenCTT\DrugPrevention.Services.DuyenCTT.csproj", "{1D4FADD0-D709-494B-BB8E-2DD07A550E02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrugPrevention.APIServices.BE.DuyenCTT", "DrugPrevention.APIServices.BE.DuyenCTT\DrugPrevention.APIServices.BE.DuyenCTT.csproj", "{B1FC077B-BCC8-44FD-98DE-92525B71BF18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D4FADD0-D709-494B-BB8E-2DD07A550E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D4FADD0-D709-494B-BB8E-2DD07A550E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D4FADD0-D709-494B-BB8E-2DD07A550E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D4FADD0-D709-494B-BB8E-2DD07A550E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1FC077B-BCC8-44FD-98DE-92525B71BF18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1FC077B-BCC8-44FD-98DE-92525B71BF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1FC077B-BCC8-44FD-98DE-92525B71BF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1FC077B-BCC8-44FD-98DE-92525B71BF18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

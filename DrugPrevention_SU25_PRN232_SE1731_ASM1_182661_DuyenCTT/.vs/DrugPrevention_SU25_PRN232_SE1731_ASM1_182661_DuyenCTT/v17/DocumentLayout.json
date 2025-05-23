@@ -1,0 +1,349 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B1FC077B-BCC8-44FD-98DE-92525B71BF18}|DrugPrevention.APIServices.BE.DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.apiservices.be.duyenctt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1FC077B-BCC8-44FD-98DE-92525B71BF18}|DrugPrevention.APIServices.BE.DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT.csproj|solutionrelative:drugprevention.apiservices.be.duyenctt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D4FADD0-D709-494B-BB8E-2DD07A550E02}|DrugPrevention.Services.DuyenCTT\\DrugPrevention.Services.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.services.duyenctt\\courseserviceduyenctt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D4FADD0-D709-494B-BB8E-2DD07A550E02}|DrugPrevention.Services.DuyenCTT\\DrugPrevention.Services.DuyenCTT.csproj|solutionrelative:drugprevention.services.duyenctt\\courseserviceduyenctt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D4FADD0-D709-494B-BB8E-2DD07A550E02}|DrugPrevention.Services.DuyenCTT\\DrugPrevention.Services.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.services.duyenctt\\courseenrollmentduyencttservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D4FADD0-D709-494B-BB8E-2DD07A550E02}|DrugPrevention.Services.DuyenCTT\\DrugPrevention.Services.DuyenCTT.csproj|solutionrelative:drugprevention.services.duyenctt\\courseenrollmentduyencttservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D4FADD0-D709-494B-BB8E-2DD07A550E02}|DrugPrevention.Services.DuyenCTT\\DrugPrevention.Services.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.services.duyenctt\\systemuseraccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D4FADD0-D709-494B-BB8E-2DD07A550E02}|DrugPrevention.Services.DuyenCTT\\DrugPrevention.Services.DuyenCTT.csproj|solutionrelative:drugprevention.services.duyenctt\\systemuseraccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.repositories.duyenctt\\courseduyencttrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|solutionrelative:drugprevention.repositories.duyenctt\\courseduyencttrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.repositories.duyenctt\\courseenrollmentduyencttrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|solutionrelative:drugprevention.repositories.duyenctt\\courseenrollmentduyencttrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.repositories.duyenctt\\systemuseraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|solutionrelative:drugprevention.repositories.duyenctt\\systemuseraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.repositories.duyenctt\\dbcontext\\se18_prn232_se1731_g2_matoecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|solutionrelative:drugprevention.repositories.duyenctt\\dbcontext\\se18_prn232_se1731_g2_matoecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1FC077B-BCC8-44FD-98DE-92525B71BF18}|DrugPrevention.APIServices.BE.DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.apiservices.be.duyenctt\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B1FC077B-BCC8-44FD-98DE-92525B71BF18}|DrugPrevention.APIServices.BE.DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT.csproj|solutionrelative:drugprevention.apiservices.be.duyenctt\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1FC077B-BCC8-44FD-98DE-92525B71BF18}|DrugPrevention.APIServices.BE.DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.apiservices.be.duyenctt\\controllers\\courseenrollmentduyencttcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1FC077B-BCC8-44FD-98DE-92525B71BF18}|DrugPrevention.APIServices.BE.DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT.csproj|solutionrelative:drugprevention.apiservices.be.duyenctt\\controllers\\courseenrollmentduyencttcontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1FC077B-BCC8-44FD-98DE-92525B71BF18}|DrugPrevention.APIServices.BE.DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.apiservices.be.duyenctt\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1FC077B-BCC8-44FD-98DE-92525B71BF18}|DrugPrevention.APIServices.BE.DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT.csproj|solutionrelative:drugprevention.apiservices.be.duyenctt\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D4FADD0-D709-494B-BB8E-2DD07A550E02}|DrugPrevention.Services.DuyenCTT\\DrugPrevention.Services.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.services.duyenctt\\drugprevention.services.duyenctt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1D4FADD0-D709-494B-BB8E-2DD07A550E02}|DrugPrevention.Services.DuyenCTT\\DrugPrevention.Services.DuyenCTT.csproj|solutionrelative:drugprevention.services.duyenctt\\drugprevention.services.duyenctt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.repositories.duyenctt\\basic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|solutionrelative:drugprevention.repositories.duyenctt\\basic\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.repositories.duyenctt\\drugprevention.repositories.duyenctt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|solutionrelative:drugprevention.repositories.duyenctt\\drugprevention.repositories.duyenctt.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.repositories.duyenctt\\models\\systemuseraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|solutionrelative:drugprevention.repositories.duyenctt\\models\\systemuseraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.repositories.duyenctt\\models\\consultantavailability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|solutionrelative:drugprevention.repositories.duyenctt\\models\\consultantavailability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|c:\\duyen_needs\\university\\semester07_spring2025\\prn222\\pe_doc\\drugprevention_su25_prn232_se1731_asm1_182661_duyenctt\\drugprevention.repositories.duyenctt\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB783E4-A0DB-4FEF-ABDD-81A99633C577}|DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj|solutionrelative:drugprevention.repositories.duyenctt\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 17,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:155:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{26341fe2-71dd-46fd-bb1b-2e51a92a0d64}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CourseEnrollmentDuyenCTTServices.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Services.DuyenCTT\\CourseEnrollmentDuyenCTTServices.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.Services.DuyenCTT\\CourseEnrollmentDuyenCTTServices.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Services.DuyenCTT\\CourseEnrollmentDuyenCTTServices.cs",
+              "RelativeToolTip": "DrugPrevention.Services.DuyenCTT\\CourseEnrollmentDuyenCTTServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T06:22:56.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CourseServiceDuyenCTT.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Services.DuyenCTT\\CourseServiceDuyenCTT.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.Services.DuyenCTT\\CourseServiceDuyenCTT.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Services.DuyenCTT\\CourseServiceDuyenCTT.cs",
+              "RelativeToolTip": "DrugPrevention.Services.DuyenCTT\\CourseServiceDuyenCTT.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T06:58:39.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SystemUserAccountService.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Services.DuyenCTT\\SystemUserAccountService.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.Services.DuyenCTT\\SystemUserAccountService.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Services.DuyenCTT\\SystemUserAccountService.cs",
+              "RelativeToolTip": "DrugPrevention.Services.DuyenCTT\\SystemUserAccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T06:57:33.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT\\Program.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.APIServices.BE.DuyenCTT\\Program.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT\\Program.cs",
+              "RelativeToolTip": "DrugPrevention.APIServices.BE.DuyenCTT\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T07:35:23.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CourseDuyenCTTRepository.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\CourseDuyenCTTRepository.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.Repositories.DuyenCTT\\CourseDuyenCTTRepository.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\CourseDuyenCTTRepository.cs",
+              "RelativeToolTip": "DrugPrevention.Repositories.DuyenCTT\\CourseDuyenCTTRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T06:07:42.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CourseEnrollmentDuyenCTTRepository.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\CourseEnrollmentDuyenCTTRepository.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.Repositories.DuyenCTT\\CourseEnrollmentDuyenCTTRepository.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\CourseEnrollmentDuyenCTTRepository.cs",
+              "RelativeToolTip": "DrugPrevention.Repositories.DuyenCTT\\CourseEnrollmentDuyenCTTRepository.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T07:34:18.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SystemUserAccountRepository.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\SystemUserAccountRepository.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.Repositories.DuyenCTT\\SystemUserAccountRepository.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\SystemUserAccountRepository.cs",
+              "RelativeToolTip": "DrugPrevention.Repositories.DuyenCTT\\SystemUserAccountRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T06:11:27.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SE18_PRN232_SE1731_G2_MaToeContext.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\DBContext\\SE18_PRN232_SE1731_G2_MaToeContext.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.Repositories.DuyenCTT\\DBContext\\SE18_PRN232_SE1731_G2_MaToeContext.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\DBContext\\SE18_PRN232_SE1731_G2_MaToeContext.cs",
+              "RelativeToolTip": "DrugPrevention.Repositories.DuyenCTT\\DBContext\\SE18_PRN232_SE1731_G2_MaToeContext.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwBEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:14:04.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT\\appsettings.json",
+              "RelativeDocumentMoniker": "DrugPrevention.APIServices.BE.DuyenCTT\\appsettings.json",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT\\appsettings.json",
+              "RelativeToolTip": "DrugPrevention.APIServices.BE.DuyenCTT\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-16T06:41:39.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.APIServices.BE.DuyenCTT\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "DrugPrevention.APIServices.BE.DuyenCTT\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T07:19:08.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CourseEnrollmentDuyenCTTControllers.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT\\Controllers\\CourseEnrollmentDuyenCTTControllers.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.APIServices.BE.DuyenCTT\\Controllers\\CourseEnrollmentDuyenCTTControllers.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT\\Controllers\\CourseEnrollmentDuyenCTTControllers.cs",
+              "RelativeToolTip": "DrugPrevention.APIServices.BE.DuyenCTT\\Controllers\\CourseEnrollmentDuyenCTTControllers.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T07:22:25.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DrugPrevention.Services.DuyenCTT.csproj",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Services.DuyenCTT\\DrugPrevention.Services.DuyenCTT.csproj",
+              "RelativeDocumentMoniker": "DrugPrevention.Services.DuyenCTT\\DrugPrevention.Services.DuyenCTT.csproj",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Services.DuyenCTT\\DrugPrevention.Services.DuyenCTT.csproj",
+              "RelativeToolTip": "DrugPrevention.Services.DuyenCTT\\DrugPrevention.Services.DuyenCTT.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-20T06:22:40.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\Basic\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.Repositories.DuyenCTT\\Basic\\GenericRepository.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\Basic\\GenericRepository.cs",
+              "RelativeToolTip": "DrugPrevention.Repositories.DuyenCTT\\Basic\\GenericRepository.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAQwEMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T07:09:30.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DrugPrevention.Repositories.DuyenCTT.csproj",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj",
+              "RelativeDocumentMoniker": "DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj",
+              "RelativeToolTip": "DrugPrevention.Repositories.DuyenCTT\\DrugPrevention.Repositories.DuyenCTT.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-20T06:31:33.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SystemUserAccount.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\Models\\SystemUserAccount.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.Repositories.DuyenCTT\\Models\\SystemUserAccount.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\Models\\SystemUserAccount.cs",
+              "RelativeToolTip": "DrugPrevention.Repositories.DuyenCTT\\Models\\SystemUserAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T06:10:36.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ConsultantAvailability.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\Models\\ConsultantAvailability.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.Repositories.DuyenCTT\\Models\\ConsultantAvailability.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\Models\\ConsultantAvailability.cs",
+              "RelativeToolTip": "DrugPrevention.Repositories.DuyenCTT\\Models\\ConsultantAvailability.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T06:07:09.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.Repositories.DuyenCTT\\Models\\Role.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester07_Spring2025\\PRN222\\PE_Doc\\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\\DrugPrevention.Repositories.DuyenCTT\\Models\\Role.cs",
+              "RelativeToolTip": "DrugPrevention.Repositories.DuyenCTT\\Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T07:45:05.663Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
