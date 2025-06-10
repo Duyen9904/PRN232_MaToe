@@ -1,0 +1,149 @@
+﻿@model IEnumerable<DrugPrevention.Repositories.DuyenCTT.Models.CourseEnrollmentDuyenCtt>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">@TempData["Message"]</div>
+}
+
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form asp-action="Index" method="get">
+    <div class="form-inline mb-3">
+        <input type="text" name="enrollmentSource" value="@ViewBag.SearchParams?.enrollmentSource" placeholder="Enrollment Source" class="form-control mr-2" />
+        <input type="text" name="score" value="@ViewBag.SearchParams?.score" placeholder="Score" class="form-control mr-2" />
+        <input type="text" name="title" value="@ViewBag.SearchParams?.title" placeholder="Title" class="form-control mr-2" />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EnrolledAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Progress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompletedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Score)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CertificateUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsCertified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnrollmentSource)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrolledAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Progress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompletedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Score)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CertificateUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCertified)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentSource)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Course.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.UserId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EnrollmentDuyenCttid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EnrollmentDuyenCttid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EnrollmentDuyenCttid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@if (ViewBag.TotalPages > 1)
+{
+    <nav>
+        <ul class="pagination">
+            @if (ViewBag.PageIndex > 1)
+            {
+                <li class="page-item">
+                    <a class="page-link"
+                       asp-action="Index"
+                       asp-route-pageIndex="@(ViewBag.PageIndex - 1)"
+                       asp-route-enrollmentSource="@ViewBag.SearchParams.enrollmentSource"
+                       asp-route-score="@ViewBag.SearchParams.score"
+                       asp-route-title="@ViewBag.SearchParams.title">
+                        Previous
+                    </a>
+                </li>
+            }
+
+            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+            {
+                <li class="page-item @(i == ViewBag.PageIndex ? "active" : "")">
+                    <a class="page-link"
+                       asp-action="Index"
+                       asp-route-pageIndex="@i"
+                       asp-route-enrollmentSource="@ViewBag.SearchParams.enrollmentSource"
+                       asp-route-score="@ViewBag.SearchParams.score"
+                       asp-route-title="@ViewBag.SearchParams.title">
+                        @i
+                    </a>
+                </li>
+            }
+
+            @if (ViewBag.PageIndex < ViewBag.TotalPages)
+            {
+                <li class="page-item">
+                    <a class="page-link"
+                       asp-action="Index"
+                       asp-route-pageIndex="@(ViewBag.PageIndex + 1)"
+                       asp-route-enrollmentSource="@ViewBag.SearchParams.enrollmentSource"
+                       asp-route-score="@ViewBag.SearchParams.score"
+                       asp-route-title="@ViewBag.SearchParams.title">
+                        Next
+                    </a>
+                </li>
+            }
+        </ul>
+    </nav>
+}

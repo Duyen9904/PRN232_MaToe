@@ -1,4 +1,5 @@
 ﻿using DrugPrevention.Repositories.DuyenCTT;
+using DrugPrevention.Repositories.DuyenCTT.ModelExtensions;
 using DrugPrevention.Repositories.DuyenCTT.Models;
 using System;
 using System.Collections.Generic;
@@ -10,10 +11,10 @@ namespace DrugPrevention.Services.DuyenCTT
 {
     public interface ICourseEnrollmentDuyenCTTServices
     {
-        Task<List<CourseEnrollmentDuyenCtt>> GetAllAsync();
+        Task<PaginationResult<CourseEnrollmentDuyenCtt>> GetAllAsync(int pageIndex, int pageSize);
         Task<CourseEnrollmentDuyenCtt> GetByIdAsync(int id);
 
-        Task<CourseEnrollmentDuyenCtt> SearchAsync(String enrollmentSource, decimal score, string title);
+        Task<PaginationResult<CourseEnrollmentDuyenCtt>> SearchAsync(string? enrollmentSource, double? score, string? title, int pageIndex, int pageSize);
 
         Task<int> CreateAsync(CourseEnrollmentDuyenCtt courseEnrollment);
         Task<int> UpdateAsync(CourseEnrollmentDuyenCtt courseEnrollment);
@@ -32,7 +33,8 @@ namespace DrugPrevention.Services.DuyenCTT
 
         public Task<int> CreateAsync(CourseEnrollmentDuyenCtt courseEnrollment)
         {
-            throw new NotImplementedException();
+            return _repository.CreateAsync(courseEnrollment);
+
         }
 
         public Task<bool> DeleteAsync(int id)
@@ -42,9 +44,9 @@ namespace DrugPrevention.Services.DuyenCTT
             return result;
         }
 
-        public Task<List<CourseEnrollmentDuyenCtt>> GetAllAsync()
+        public Task<PaginationResult<CourseEnrollmentDuyenCtt>> GetAllAsync(int pageIndex, int pageSize)
         {
-            return _repository.GetAllAsync();
+            return _repository.GetAllAsync(pageIndex, pageSize);
         }
 
         public async Task<CourseEnrollmentDuyenCtt> GetByIdAsync(int id)
@@ -52,10 +54,11 @@ namespace DrugPrevention.Services.DuyenCTT
             return await _repository.GetByIdAsync(id);
         }
 
-        public Task<CourseEnrollmentDuyenCtt> SearchAsync(string enrollmentSource, decimal score, string title)
+        public async Task<PaginationResult<CourseEnrollmentDuyenCtt>> SearchAsync(string? enrollmentSource, double? score, string? title, int pageIndex, int pageSize)
         {
-            throw new NotImplementedException();
+            return await _repository.SearchAsync(enrollmentSource, score, title, pageIndex, pageSize);
         }
+
 
         public async Task<int> UpdateAsync(CourseEnrollmentDuyenCtt courseEnrollment)
         {

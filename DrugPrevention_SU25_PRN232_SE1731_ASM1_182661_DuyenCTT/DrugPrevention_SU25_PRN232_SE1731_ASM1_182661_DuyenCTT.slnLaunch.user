@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "DrugPrevention.APIServices.BE.DuyenCTT\\DrugPrevention.APIServices.BE.DuyenCTT.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "DrugPrevention.MVCWebApp.FE.DuyenCTT\\DrugPrevention.MVCWebApp.FE.DuyenCTT.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

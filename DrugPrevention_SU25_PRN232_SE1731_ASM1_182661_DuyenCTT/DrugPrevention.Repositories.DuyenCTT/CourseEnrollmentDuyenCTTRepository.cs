@@ -1,5 +1,6 @@
 ﻿using DrugPrevention.Repositories.DuyenCTT.Basic;
 using DrugPrevention.Repositories.DuyenCTT.DBContext;
+using DrugPrevention.Repositories.DuyenCTT.ModelExtensions;
 using DrugPrevention.Repositories.DuyenCTT.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -14,13 +15,18 @@ namespace DrugPrevention.Repositories.DuyenCTT
     {
         public CourseEnrollmentDuyenCTTRepository() => _context = new SE18_PRN232_SE1731_G2_MaToeContext();
         public CourseEnrollmentDuyenCTTRepository(SE18_PRN232_SE1731_G2_MaToeContext context) => _context = context;
-        public async Task<List<CourseEnrollmentDuyenCtt>> GetAllAsync()
+        public async Task<PaginationResult<CourseEnrollmentDuyenCtt>> GetAllAsync(int pageIndex, int pageSize)
         {
-            var courseEnrollments = await _context.CourseEnrollmentDuyenCtts
+            var totalItems = await _context.CourseEnrollmentDuyenCtts.CountAsync();
+
+            var items = await _context.CourseEnrollmentDuyenCtts
                 .Include(ce => ce.Course)
                 .Include(ce => ce.User)
+                .Skip((pageIndex - 1) * pageSize)
+                .Take(pageSize)
                 .ToListAsync();
-            return courseEnrollments;
+
+            return new PaginationResult<CourseEnrollmentDuyenCtt>(items, totalItems, pageIndex, pageSize);
         }
 
         public async Task<CourseEnrollmentDuyenCtt> GetByIdAsync(int id)
@@ -32,18 +38,30 @@ namespace DrugPrevention.Repositories.DuyenCTT
             return courseEnrollment ?? new CourseEnrollmentDuyenCtt();
         }
 
-        public async Task<List<CourseEnrollmentDuyenCtt>> SearchAsync(String enrollmentSource, decimal score, string certificateUrl)
+        public async Task<PaginationResult<CourseEnrollmentDuyenCtt>> SearchAsync(string? enrollmentSource, double? score, string? certificateUrl, int pageIndex, int pageSize)
         {
-            var courseEnrollment = await _context.CourseEnrollmentDuyenCtts
-                   .Include(q => q.Course)
-                   .Where(q =>
-                       (string.IsNullOrEmpty(enrollmentSource) || q.EnrollmentSource.Contains(enrollmentSource))
-                       && (string.IsNullOrEmpty(certificateUrl) || q.CertificateUrl.Contains(certificateUrl))
-                       && (q.Score == score || score == null || score == 0)
-                   ).ToListAsync();
+            var query = _context.CourseEnrollmentDuyenCtts
+                .Include(ce => ce.Course)
+                .Include(ce => ce.User)
+                .AsQueryable();
 
+            if (!string.IsNullOrWhiteSpace(enrollmentSource))
+                query = query.Where(ce => ce.EnrollmentSource.Contains(enrollmentSource));
 
-            return courseEnrollment;
+            if (score.HasValue)
+                query = query.Where(ce => ce.Score >= (decimal)score.Value);
+
+            if (!string.IsNullOrWhiteSpace(certificateUrl))
+                query = query.Where(ce => ce.CertificateUrl.Contains(certificateUrl));
+
+            var totalItems = await query.CountAsync();
+
+            var items = await query
+                .Skip((pageIndex - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return new PaginationResult<CourseEnrollmentDuyenCtt>(items, totalItems, pageIndex, pageSize);
         }
     }
 }

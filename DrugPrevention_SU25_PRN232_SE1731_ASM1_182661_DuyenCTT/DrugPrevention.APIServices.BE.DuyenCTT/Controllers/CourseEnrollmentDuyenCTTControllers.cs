@@ -1,13 +1,18 @@
-﻿using DrugPrevention.Repositories.DuyenCTT.Models;
+﻿using DrugPrevention.APIServices.BE.DuyenCTT.DTOs;
+using DrugPrevention.APIServices.BE.DuyenCTT.Mappers;
+using DrugPrevention.Repositories.DuyenCTT.ModelExtensions;
+using DrugPrevention.Repositories.DuyenCTT.Models;
 using DrugPrevention.Services.DuyenCTT;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace DrugPrevention.APIServices.BE.DuyenCTT.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/course-enrollments")]
     [ApiController]
+    [Authorize]
     public class CourseEnrollmentDuyenCTTControllers : ControllerBase
     {
         private readonly ICourseEnrollmentDuyenCTTServices _courseEnrollmentDuyenCTTServices;
@@ -17,37 +22,90 @@ namespace DrugPrevention.APIServices.BE.DuyenCTT.Controllers
             _courseEnrollmentDuyenCTTServices = courseEnrollmentDuyenCTTServices;
         }
 
-
-        // GET: api/<CourseEnrollmentDuyenCTTController>
+        // GET: api/CourseEnrollmentDuyenCTT?pageIndex=1&pageSize=10
         [HttpGet]
-        public async Task<IEnumerable<CourseEnrollment>> Get()
+        [Authorize(Roles = "1,2")]
+        public async Task<ActionResult<PaginationResult<CourseEnrollmentDuyenCttDto>>> Get([FromQuery] int pageIndex = 1, [FromQuery] int pageSize = 10)
         {
-           return await _courseEnrollmentDuyenCTTServices.GetAllAsync();
+            var result = await _courseEnrollmentDuyenCTTServices.GetAllAsync(pageIndex, pageSize);
+            var dtoResult = new PaginationResult<CourseEnrollmentDuyenCttDto>(
+                result.Items.Select(e => e.ToDto()).ToList(),
+                result.TotalItems,
+                result.PageIndex,
+                result.PageSize
+            );
+            return Ok(dtoResult);
         }
 
-        // GET api/<CourseEnrollmentDuyenCTTController>/5
+        // GET api/CourseEnrollmentDuyenCTT/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        [Authorize(Roles = "1,2")]
+        public async Task<ActionResult<CourseEnrollmentDuyenCttDto>> Get(int id)
         {
-            return "value";
+            var result = await _courseEnrollmentDuyenCTTServices.GetByIdAsync(id);
+            if (result == null || result.EnrollmentDuyenCttid == 0)
+                return NotFound();
+            return Ok(result.ToDto());
         }
 
-        // POST api/<CourseEnrollmentDuyenCTTController>
+        // POST api/CourseEnrollmentDuyenCTT
         [HttpPost]
-        public void Post([FromBody] string value)
+        [Authorize(Roles = "1,2")]
+        public async Task<ActionResult<int>> Post([FromBody] CreateCourseEnrollmentDuyenCttDto createDto)
         {
+            var entity = createDto.ToEntity();
+            var id = await _courseEnrollmentDuyenCTTServices.CreateAsync(entity);
+            return CreatedAtAction(nameof(Get), new { id }, id);
         }
 
-        // PUT api/<CourseEnrollmentDuyenCTTController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [Authorize(Roles = "1,2")]
+        public async Task<ActionResult<int>> Put(int id, [FromBody] CreateCourseEnrollmentDuyenCttDto updateDto)
         {
+            if (id != updateDto.EnrollmentDuyenCttid)
+                return BadRequest("ID mismatch");
+
+            var entity = updateDto.ToEntity();
+            var result = await _courseEnrollmentDuyenCTTServices.UpdateAsync(entity);
+            return Ok(result);
         }
 
-        // DELETE api/<CourseEnrollmentDuyenCTTController>/5
+
+        // DELETE api/CourseEnrollmentDuyenCTT/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        [Authorize(Roles = "1")]
+        public async Task<ActionResult<bool>> Delete(int id)
         {
+            var success = await _courseEnrollmentDuyenCTTServices.DeleteAsync(id);
+            if (!success)
+                return NotFound();
+            return Ok(success);
         }
+
+        // GET api/CourseEnrollmentDuyenCTT/search?enrollmentSource=abc&score=85&title=xyz&pageIndex=1&pageSize=10
+        [HttpGet("search")]
+        [Authorize(Roles = "1,2")]
+        public async Task<ActionResult<PaginationResult<CourseEnrollmentDuyenCttDto>>> Search(
+            [FromQuery] string? enrollmentSource,
+            [FromQuery] double? score,
+            [FromQuery] string? title,
+            [FromQuery] int pageIndex = 1,
+            [FromQuery] int pageSize = 10)
+        {
+            var result = await _courseEnrollmentDuyenCTTServices.SearchAsync(
+                enrollmentSource, score, title, pageIndex, pageSize);
+
+            var dtoResult = new PaginationResult<CourseEnrollmentDuyenCttDto>(
+                result.Items.Select(e => e.ToDto()).ToList(),
+                result.TotalItems,
+                result.PageIndex,
+                result.PageSize
+            );
+
+            return Ok(dtoResult);
+        }
+
     }
+
+
 }

@@ -1,0 +1,116 @@
+﻿@model IEnumerable<DrugPrevention.Repositories.DuyenCTT.Models.CourseDuyenCtt>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<!-- Razor-rendered Course Table -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Target Group</th>
+            <th>Is Active</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CourseDuyenCttid</td>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td>@item.TargetGroup</td>
+                <td>@(item.IsActive.HasValue ? (item.IsActive.Value ? "Yes" : "No") : "N/A")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CourseDuyenCttid">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.CourseDuyenCttid">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.CourseDuyenCttid">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<hr />
+
+<!-- AJAX-loaded CategoryBanks Table -->
+<h2>Courses (Loaded via API)</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Target Group</th>
+            <th>Is Active</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody class="tblCoursesBody">
+        <!-- AJAX-loaded rows will go here -->
+    </tbody>
+</table>
+
+@section Scripts {
+    <script type="text/javascript">
+        // Helper to get cookie value by name
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        $(document).ready(function () {
+            loadCourses();
+        });
+
+        function loadCourses() {
+            var token = getCookie("TokenString");
+            $.ajax({
+                url: 'https://localhost:7003/api/courses',
+                type: "GET",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                beforeSend: function (xhr) {
+                    if (token) {
+                        xhr.setRequestHeader("Authorization", "Bearer " + token);
+                    }
+                },
+                success: function (result) {
+                    var html = '';
+                    $.each(result, function (key, item) {
+                        html += '<tr>';
+                        html += '<td>' + item.courseDuyenCttid + '</td>';
+                        html += '<td>' + item.title + '</td>';
+                        html += '<td>' + item.description + '</td>';
+                        html += '<td>' + item.targetGroup + '</td>';
+                        html += '<td>' + (item.isActive === true ? 'Yes' : item.isActive === false ? 'No' : 'N/A') + '</td>';
+                        html += '<td><button class="btn btn-sm btn-info" onclick="viewCourse(' + item.courseDuyenCttid + ')">View</button></td>';
+                        html += '</tr>';
+                    });
+                    $('.tblCoursesBody').html(html);
+                },
+                error: function (xhr, error) {
+                    alert("Error loading courses: " + xhr.statusText);
+                }
+            });
+        }
+
+        function viewCourse(id) {
+            alert("View course with ID: " + id);
+            // Optionally redirect:
+            // window.location.href = '/Courses/Details/' + id;
+        }
+    </script>
+}

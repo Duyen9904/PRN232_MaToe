@@ -8,7 +8,11 @@ using System.Threading.Tasks;
 
 namespace DrugPrevention.Services.DuyenCTT
 {
-    public class SystemUserAccountService
+    public interface ISystemUserAccountService
+    {
+        Task<SystemUserAccount> GetUserAccount(string username, string password);
+    }
+    public class SystemUserAccountService : ISystemUserAccountService
     {
         private readonly SystemUserAccountRepository _repository;
         public SystemUserAccountService() => _repository = new SystemUserAccountRepository();
