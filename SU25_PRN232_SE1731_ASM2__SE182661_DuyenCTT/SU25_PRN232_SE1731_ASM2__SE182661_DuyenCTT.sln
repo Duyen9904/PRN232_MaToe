@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrugPrevention.Repositories.DuyenCTT", "..\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\DrugPrevention.Repositories.DuyenCTT\DrugPrevention.Repositories.DuyenCTT.csproj", "{08360212-0519-4C18-A815-C9B978718DAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrugPrevention.Services.DuyenCTT", "..\DrugPrevention_SU25_PRN232_SE1731_ASM1_182661_DuyenCTT\DrugPrevention.Services.DuyenCTT\DrugPrevention.Services.DuyenCTT.csproj", "{D69FA02D-4D60-44FA-BDCF-DC959D7CC7E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrugPrevention.GraphQLAPIServices.DuyenCTT", "DrugPrevention.GraphQLAPIServices.DuyenCTT\DrugPrevention.GraphQLAPIServices.DuyenCTT.csproj", "{03D47F43-E86C-4CA5-B2DE-D8A5F6C191E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrugPrevention.GraphQLClients.BlazorWAS.DuyenCTT", "DrugPrevention.GraphQLClients.BlazorWAS.DuyenCTT\DrugPrevention.GraphQLClients.BlazorWAS.DuyenCTT.csproj", "{426594DC-EEBB-4503-87BA-D9893B70A794}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08360212-0519-4C18-A815-C9B978718DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08360212-0519-4C18-A815-C9B978718DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08360212-0519-4C18-A815-C9B978718DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08360212-0519-4C18-A815-C9B978718DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D69FA02D-4D60-44FA-BDCF-DC959D7CC7E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D69FA02D-4D60-44FA-BDCF-DC959D7CC7E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D69FA02D-4D60-44FA-BDCF-DC959D7CC7E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D69FA02D-4D60-44FA-BDCF-DC959D7CC7E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03D47F43-E86C-4CA5-B2DE-D8A5F6C191E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D47F43-E86C-4CA5-B2DE-D8A5F6C191E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D47F43-E86C-4CA5-B2DE-D8A5F6C191E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D47F43-E86C-4CA5-B2DE-D8A5F6C191E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{426594DC-EEBB-4503-87BA-D9893B70A794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{426594DC-EEBB-4503-87BA-D9893B70A794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{426594DC-EEBB-4503-87BA-D9893B70A794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{426594DC-EEBB-4503-87BA-D9893B70A794}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+@DrugPrevention.GraphQLAPIServices.DuyenCTT_HostAddress = http://localhost:5237
+
+GET {{DrugPrevention.GraphQLAPIServices.DuyenCTT_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,144 @@
+﻿@page "/CourseEnrollmentDuyenCTT/CourseEnrollmentDuyenCTTList"
+@using DrugPrevention.GraphQLClients.BlazorWAS.DuyenCTT.Models
+
+@inject DrugPrevention.GraphQLClients.BlazorWAS.DuyenCTT.GraphQLClients.GraphQLConsumer GraphQLConsumer
+
+<h3 class="mb-3">Course Enrollments</h3>
+
+@if (isLoading)
+{
+    <p>Loading...</p>
+}
+else if (courseEnrollments?.Any() == true)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>User ID</th>
+                <th>Course ID</th>
+                <th>Score</th>
+                <th>Certificate</th>
+                <th>Enrolled At</th>
+                <th>Completed At</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in courseEnrollments)
+            {
+                <tr>
+                    <td>@item.EnrollmentDuyenCttid</td>
+                    <td>@item.UserId</td>
+                    <td>@item.CourseId</td>
+                    <td>@item.Score</td>
+                    <td>@item.CertificateUrl</td>
+                    <td>@item.EnrolledAt?.ToString("yyyy-MM-dd")</td>
+                    <td>@item.CompletedAt?.ToString("yyyy-MM-dd")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="d-flex justify-content-center mt-3">
+        <button class="btn btn-outline-secondary mx-1" @onclick="() => GoToPage(page - 1)" disabled="@(page <= 1)">
+            &lt;
+        </button>
+
+        @foreach (var item in GetPageRange())
+        {
+            if (item == "...")
+            {
+                <span class="mx-1">...</span>
+            }
+            else
+            {
+                var pageNumber = int.Parse(item);
+                <button class="btn mx-1 @(page == pageNumber ? "btn-primary" : "btn-outline-primary")"
+                        @onclick="() => GoToPage(pageNumber)">
+                    @pageNumber
+                </button>
+            }
+        }
+
+        <button class="btn btn-outline-secondary mx-1" @onclick="() => GoToPage(page + 1)" disabled="@(page >= totalPages)">
+            &gt;
+        </button>
+    </div>
+}
+else
+{
+    <p>No enrollments found.</p>
+}
+
+@code {
+    private List<CourseEnrollmentDuyenCtt> courseEnrollments = new();
+    private bool isLoading = true;
+
+    private int page = 1;
+    private int size = 10;
+    private int totalPages = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadDataAsync();
+    }
+
+    private async Task GoToPage(int targetPage)
+    {
+        if (targetPage < 1 || targetPage > totalPages)
+            return;
+
+        page = targetPage;
+        await LoadDataAsync();
+    }
+
+    private async Task LoadDataAsync()
+    {
+        isLoading = true;
+        try
+        {
+            var result = await GraphQLConsumer.GetAllAsync(page, size);
+            courseEnrollments = result?.Items ?? new List<CourseEnrollmentDuyenCtt>();
+
+            totalPages = result?.TotalPages ?? 1;
+            totalPages = Math.Max(1, totalPages);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error loading course enrollments: " + ex.Message);
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private List<string> GetPageRange()
+    {
+        const int visibleCount = 2;
+        var pages = new List<string>();
+
+        if (totalPages <= 7)
+        {
+            for (int i = 1; i <= totalPages; i++)
+                pages.Add(i.ToString());
+        }
+        else
+        {
+            pages.Add("1");
+
+            if (page > visibleCount + 2)
+                pages.Add("...");
+
+            for (int i = Math.Max(2, page - visibleCount); i <= Math.Min(totalPages - 1, page + visibleCount); i++)
+                pages.Add(i.ToString());
+
+            if (page < totalPages - visibleCount - 1)
+                pages.Add("...");
+
+            pages.Add(totalPages.ToString());
+        }
+
+        return pages;
+    }
+}
