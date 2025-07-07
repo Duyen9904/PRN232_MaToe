@@ -1,9 +1,13 @@
 using DrugPrevention.Repositories.DuyenCTT;
 using DrugPrevention.Repositories.DuyenCTT.DBContext;
+using DrugPrevention.Repositories.DuyenCTT.Models;
 using DrugPrevention.Services.DuyenCTT;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OData.Edm;
+using Microsoft.OData.ModelBuilder;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -28,6 +32,19 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 // Add services to the container.
+
+static IEdmModel GetEdmModel()
+{
+    var odataBuilder = new ODataConventionModelBuilder();
+    odataBuilder.EntitySet<CourseEnrollmentDuyenCtt>("CourseEnrollmentDuyenCtt"); // EDM - ENTITY DATA MODEL
+    odataBuilder.EntitySet<CourseDuyenCtt>("CourseDuyenCtt");
+    return odataBuilder.GetEdmModel();
+}
+builder.Services.AddControllers().AddOData(options =>
+{
+    options.Select().Filter().OrderBy().Expand().SetMaxTop(null).Count();
+    options.AddRouteComponents("odata", GetEdmModel());
+});
 
 builder.Services.AddControllers();
 

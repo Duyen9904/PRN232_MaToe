@@ -11,7 +11,7 @@ namespace DrugPrevention.Services.DuyenCTT
 {
     public interface ICourseEnrollmentDuyenCTTServices
     {
-        Task<PaginationResult<CourseEnrollmentDuyenCtt>> GetAllAsync(int pageIndex, int pageSize);
+        Task<PaginationResult<CourseEnrollmentDuyenCtt>> GetAllAsync(int pageIndex, int pageSize, string sortField, string sortOrder);
         Task<CourseEnrollmentDuyenCtt> GetByIdAsync(int id);
 
         Task<PaginationResult<CourseEnrollmentDuyenCtt>> SearchAsync(string? enrollmentSource, double? score, string? title, int pageIndex, int pageSize);
@@ -44,9 +44,9 @@ namespace DrugPrevention.Services.DuyenCTT
             return result;
         }
 
-        public Task<PaginationResult<CourseEnrollmentDuyenCtt>> GetAllAsync(int pageIndex, int pageSize)
+        public Task<PaginationResult<CourseEnrollmentDuyenCtt>> GetAllAsync(int pageIndex, int pageSize, string sortField, string sortOrder)
         {
-            return _repository.GetAllAsync(pageIndex, pageSize);
+            return _repository.GetAllAsync(pageIndex, pageSize, sortField, sortOrder);
         }
 
         public async Task<CourseEnrollmentDuyenCtt> GetByIdAsync(int id)

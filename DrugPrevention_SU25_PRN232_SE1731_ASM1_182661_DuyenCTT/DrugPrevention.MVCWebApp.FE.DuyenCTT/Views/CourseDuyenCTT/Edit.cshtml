@@ -1,7 +1,6 @@
-﻿@model DrugPrevention.Repositories.DuyenCTT.Models.CourseDuyenCtt
-
-@{
+﻿@{
     ViewData["Title"] = "Edit";
+    var courseId = ViewBag.CourseId; // Set from controller
 }
 
 <h1>Edit</h1>
@@ -10,29 +9,30 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="CourseDuyenCttid" />
+        <form id="editCourseForm">
+            <input type="hidden" id="CourseDuyenCttid" />
+
             <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
+                <label for="Title">Title</label>
+                <input id="Title" name="Title" class="form-control" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="Title" data-valmsg-replace="true"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
+                <label for="Description">Description</label>
+                <input id="Description" name="Description" class="form-control" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="Description" data-valmsg-replace="true"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TargetGroup" class="control-label"></label>
-                <input asp-for="TargetGroup" class="form-control" />
-                <span asp-validation-for="TargetGroup" class="text-danger"></span>
+                <label for="TargetGroup">Target Group</label>
+                <input id="TargetGroup" name="TargetGroup" class="form-control" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="TargetGroup" data-valmsg-replace="true"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IsActive" class="control-label"></label>
-                <input asp-for="IsActive" class="form-control" />
-                <span asp-validation-for="IsActive" class="text-danger"></span>
+                <label for="IsActive">Is Active</label>
+                <input id="IsActive" name="IsActive" type="checkbox" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="IsActive" data-valmsg-replace="true"></span>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -45,5 +45,75 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script type="text/javascript">
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        $(document).ready(function () {
+            const courseId = @courseId;
+            const token = getCookie("TokenString");
+
+            // Load course data
+            $.ajax({
+                url: 'https://localhost:7003/api/courses/' + courseId,
+                type: 'GET',
+                contentType: 'application/json',
+                dataType: 'json',
+                beforeSend: function (xhr) {
+                    if (token) {
+                        xhr.setRequestHeader("Authorization", "Bearer " + token);
+                    }
+                },
+                success: function (course) {
+                    $('#CourseDuyenCttid').val(course.courseDuyenCttid);
+                    $('#Title').val(course.title);
+                    $('#Description').val(course.description);
+                    $('#TargetGroup').val(course.targetGroup);
+                    $('#IsActive').prop('checked', course.isActive);
+                },
+                error: function (xhr) {
+                    alert('Error loading course: ' + xhr.responseText);
+                }
+            });
+
+            // Submit form via AJAX
+            $('#editCourseForm').submit(function (e) {
+                e.preventDefault();
+
+                const updatedCourse = {
+                    courseDuyenCttid: $('#CourseDuyenCttid').val(),
+                    title: $('#Title').val(),
+                    description: $('#Description').val(),
+                    targetGroup: $('#TargetGroup').val(),
+                    isActive: $('#IsActive').is(':checked')
+                };
+
+                $.ajax({
+                    url: 'https://:7003/api/courses/' + updatedCourse.courseDuyenCttid,
+                    type: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify(updatedCourse),
+                    beforeSend: function (xhr) {localhost
+                        if (token) {
+                            xhr.setRequestHeader("Authorization", "Bearer " + token);
+                        }
+                    },
+                    success: function () {
+                        alert('Course updated successfully!');
+                        window.location.href = '/Courses/Index';
+                    },
+                    error: function (xhr) {
+                        alert('Error updating course: ' + xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
 }

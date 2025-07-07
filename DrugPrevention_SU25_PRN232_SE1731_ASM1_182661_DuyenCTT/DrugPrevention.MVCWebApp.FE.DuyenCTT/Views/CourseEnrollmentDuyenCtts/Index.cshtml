@@ -2,13 +2,34 @@
 
 @{
     ViewData["Title"] = "Index";
+    string currentSortField = Context.Request.Query["sortField"];
+    string currentSortOrder = Context.Request.Query["sortOrder"];
+    string GetSortUrl(string field)
+    {
+        string newOrder = currentSortField == field && currentSortOrder == "asc" ? "desc" : "asc";
+        return Url.Action("Index", new
+        {
+            enrollmentSource = ViewBag.SearchParams.enrollmentSource,
+            score = ViewBag.SearchParams.score,
+            title = ViewBag.SearchParams.title,
+            pageIndex = ViewBag.PageIndex,
+            pageSize = ViewBag.PageSize,
+            sortField = field,
+            sortOrder = newOrder
+        });
+    }
+
+    string GetSortIcon(string field)
+    {
+        if (currentSortField != field) return "";
+        return currentSortOrder == "asc" ? " ▲" : " ▼";
+    }
 }
 
 @if (TempData["Message"] != null)
 {
     <div class="alert alert-info">@TempData["Message"]</div>
 }
-
 
 <h1>Index</h1>
 
@@ -25,80 +46,44 @@
     </div>
 </form>
 
-
-
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.EnrolledAt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Progress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CompletedAt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Score)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CertificateUrl)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsCertified)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EnrollmentSource)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Course.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User)
-            </th>
+            <th><a href="@GetSortUrl("EnrolledAt")">Enrolled At@GetSortIcon("EnrolledAt")</a></th>
+            <th><a href="@GetSortUrl("Progress")">Progress@GetSortIcon("Progress")</a></th>
+            <th><a href="@GetSortUrl("CompletedAt")">Completed At@GetSortIcon("CompletedAt")</a></th>
+            <th><a href="@GetSortUrl("Score")">Score@GetSortIcon("Score")</a></th>
+            <th><a href="@GetSortUrl("CertificateUrl")">Certificate URL@GetSortIcon("CertificateUrl")</a></th>
+            <th><a href="@GetSortUrl("IsCertified")">Certified@GetSortIcon("IsCertified")</a></th>
+            <th><a href="@GetSortUrl("EnrollmentSource")">Source@GetSortIcon("EnrollmentSource")</a></th>
+            <th><a href="@GetSortUrl("Course.Title")">Course Title@GetSortIcon("Course.Title")</a></th>
+            <th><a href="@GetSortUrl("User.UserId")">User ID@GetSortIcon("User.UserId")</a></th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.EnrolledAt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Progress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CompletedAt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Score)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CertificateUrl)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsCertified)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EnrollmentSource)
-            </td>
-            <td>
-                    @Html.DisplayFor(modelItem => item.Course.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.UserId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.EnrollmentDuyenCttid">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.EnrollmentDuyenCttid">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.EnrollmentDuyenCttid">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.EnrolledAt)</td>
+                <td>@Html.DisplayFor(modelItem => item.Progress)</td>
+                <td>@Html.DisplayFor(modelItem => item.CompletedAt)</td>
+                <td>@Html.DisplayFor(modelItem => item.Score)</td>
+                <td>@Html.DisplayFor(modelItem => item.CertificateUrl)</td>
+                <td>@Html.DisplayFor(modelItem => item.IsCertified)</td>
+                <td>@Html.DisplayFor(modelItem => item.EnrollmentSource)</td>
+                <td>@Html.DisplayFor(modelItem => item.Course.Title)</td>
+                <td>@Html.DisplayFor(modelItem => item.User.UserId)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.EnrollmentDuyenCttid">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.EnrollmentDuyenCttid">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.EnrollmentDuyenCttid">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
 @if (ViewBag.TotalPages > 1)
 {
     <nav>
@@ -109,9 +94,12 @@
                     <a class="page-link"
                        asp-action="Index"
                        asp-route-pageIndex="@(ViewBag.PageIndex - 1)"
+                       asp-route-pageSize="@ViewBag.PageSize"
                        asp-route-enrollmentSource="@ViewBag.SearchParams.enrollmentSource"
                        asp-route-score="@ViewBag.SearchParams.score"
-                       asp-route-title="@ViewBag.SearchParams.title">
+                       asp-route-title="@ViewBag.SearchParams.title"
+                       asp-route-sortField="@currentSortField"
+                       asp-route-sortOrder="@currentSortOrder">
                         Previous
                     </a>
                 </li>
@@ -123,9 +111,12 @@
                     <a class="page-link"
                        asp-action="Index"
                        asp-route-pageIndex="@i"
+                       asp-route-pageSize="@ViewBag.PageSize"
                        asp-route-enrollmentSource="@ViewBag.SearchParams.enrollmentSource"
                        asp-route-score="@ViewBag.SearchParams.score"
-                       asp-route-title="@ViewBag.SearchParams.title">
+                       asp-route-title="@ViewBag.SearchParams.title"
+                       asp-route-sortField="@currentSortField"
+                       asp-route-sortOrder="@currentSortOrder">
                         @i
                     </a>
                 </li>
@@ -137,9 +128,12 @@
                     <a class="page-link"
                        asp-action="Index"
                        asp-route-pageIndex="@(ViewBag.PageIndex + 1)"
+                       asp-route-pageSize="@ViewBag.PageSize"
                        asp-route-enrollmentSource="@ViewBag.SearchParams.enrollmentSource"
                        asp-route-score="@ViewBag.SearchParams.score"
-                       asp-route-title="@ViewBag.SearchParams.title">
+                       asp-route-title="@ViewBag.SearchParams.title"
+                       asp-route-sortField="@currentSortField"
+                       asp-route-sortOrder="@currentSortOrder">
                         Next
                     </a>
                 </li>

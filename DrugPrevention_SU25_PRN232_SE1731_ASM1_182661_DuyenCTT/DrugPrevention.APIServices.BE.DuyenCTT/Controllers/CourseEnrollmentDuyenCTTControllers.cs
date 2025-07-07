@@ -25,17 +25,24 @@ namespace DrugPrevention.APIServices.BE.DuyenCTT.Controllers
         // GET: api/CourseEnrollmentDuyenCTT?pageIndex=1&pageSize=10
         [HttpGet]
         [Authorize(Roles = "1,2")]
-        public async Task<ActionResult<PaginationResult<CourseEnrollmentDuyenCttDto>>> Get([FromQuery] int pageIndex = 1, [FromQuery] int pageSize = 10)
+        public async Task<ActionResult<PaginationResult<CourseEnrollmentDuyenCttDto>>> Get(
+     [FromQuery] int pageIndex = 1,
+     [FromQuery] int pageSize = 10,
+     [FromQuery] string sortField = null,
+     [FromQuery] string sortOrder = "asc")
         {
-            var result = await _courseEnrollmentDuyenCTTServices.GetAllAsync(pageIndex, pageSize);
+            var result = await _courseEnrollmentDuyenCTTServices.GetAllAsync(pageIndex, pageSize, sortField, sortOrder);
+
             var dtoResult = new PaginationResult<CourseEnrollmentDuyenCttDto>(
                 result.Items.Select(e => e.ToDto()).ToList(),
                 result.TotalItems,
                 result.PageIndex,
                 result.PageSize
             );
+
             return Ok(dtoResult);
         }
+
 
         // GET api/CourseEnrollmentDuyenCTT/5
         [HttpGet("{id}")]

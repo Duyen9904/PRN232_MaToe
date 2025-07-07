@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Connected Services\SoapServiceReference\**" />
+    <Compile Remove="ServiceReference1\**" />
+    <Compile Remove="ServiceReference2\**" />
+    <Compile Remove="ServiceReference3\**" />
+    <Compile Remove="ServiceReference4\**" />
+    <Compile Remove="ServiceReference\**" />
+    <EmbeddedResource Remove="Connected Services\SoapServiceReference\**" />
+    <EmbeddedResource Remove="ServiceReference1\**" />
+    <EmbeddedResource Remove="ServiceReference2\**" />
+    <EmbeddedResource Remove="ServiceReference3\**" />
+    <EmbeddedResource Remove="ServiceReference4\**" />
+    <EmbeddedResource Remove="ServiceReference\**" />
+    <None Remove="Connected Services\SoapServiceReference\**" />
+    <None Remove="ServiceReference1\**" />
+    <None Remove="ServiceReference2\**" />
+    <None Remove="ServiceReference3\**" />
+    <None Remove="ServiceReference4\**" />
+    <None Remove="ServiceReference\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\SoapServiceReference\Reference.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.ServiceModel.Duplex" Version="6.0.*" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="6.0.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="6.0.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="6.0.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="6.0.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.ServiceModel.Primitives" Version="8.*" />
+  </ItemGroup>
+</Project>

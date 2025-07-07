@@ -1,0 +1,6 @@
+@CourseEnrollmentDuyenCTT.OcelotAPIGateway.SE182661_HostAddress = http://localhost:5001
+
+GET {{CourseEnrollmentDuyenCTT.OcelotAPIGateway.SE182661_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

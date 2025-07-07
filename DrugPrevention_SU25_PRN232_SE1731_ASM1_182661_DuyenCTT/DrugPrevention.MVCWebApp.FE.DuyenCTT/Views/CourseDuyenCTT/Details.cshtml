@@ -1,7 +1,6 @@
-﻿@model DrugPrevention.Repositories.DuyenCTT.Models.CourseDuyenCtt
-
-@{
+﻿@{
     ViewData["Title"] = "Details";
+    var courseId = ViewBag.CourseId; // assuming passed from controller
 }
 
 <h1>Details</h1>
@@ -10,33 +9,57 @@
     <h4>CourseDuyenCtt</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TargetGroup)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TargetGroup)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IsActive)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IsActive)
-        </dd>
+        <dt class="col-sm-2">Title</dt>
+        <dd class="col-sm-10" id="courseTitle"></dd>
+
+        <dt class="col-sm-2">Description</dt>
+        <dd class="col-sm-10" id="courseDescription"></dd>
+
+        <dt class="col-sm-2">Target Group</dt>
+        <dd class="col-sm-10" id="courseTargetGroup"></dd>
+
+        <dt class="col-sm-2">Is Active</dt>
+        <dd class="col-sm-10" id="courseIsActive"></dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.CourseDuyenCttid">Edit</a> |
+    <a id="editLink">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+
+@section Scripts {
+    <script type="text/javascript">
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        $(document).ready(function () {
+            const courseId = @courseId;
+            const token = getCookie("TokenString");
+
+            $.ajax({
+                url: 'https://localhost:7003/api/courses/' + courseId,
+                type: 'GET',
+                contentType: 'application/json',
+                dataType: 'json',
+                beforeSend: function (xhr) {
+                    if (token) {
+                        xhr.setRequestHeader("Authorization", "Bearer " + token);
+                    }
+                },
+                success: function (course) {
+                    $('#courseTitle').text(course.title);
+                    $('#courseDescription').text(course.description);
+                    $('#courseTargetGroup').text(course.targetGroup);
+                    $('#courseIsActive').text(course.isActive ? "Yes" : "No");
+                    $('#editLink').attr('href', '/Courses/Edit/' + course.courseDuyenCttid);
+                },
+                error: function (xhr) {
+                    alert("Error loading course: " + xhr.responseText);
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,6 @@
+@DrugPrevetion.OcelotAPIGateway.SE182661_HostAddress = http://localhost:5278
+
+GET {{DrugPrevetion.OcelotAPIGateway.SE182661_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

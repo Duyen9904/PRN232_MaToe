@@ -2,11 +2,13 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DrugPrevention.Repositories.DuyenCTT.Models;
 
 public partial class CourseDuyenCtt
 {
+    [Key]
     public int CourseDuyenCttid { get; set; }
 
     public string Title { get; set; }

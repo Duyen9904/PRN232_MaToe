@@ -37,18 +37,30 @@ namespace DrugPrevention.MVCWebApp.FE.DuyenCTT.Controllers
 
 
         // GET: CourseEnrollmentDuyenCtts
-        public async Task<IActionResult> Index(string enrollmentSource, double? score, string title, int pageIndex = 1, int pageSize = 10)
+        public async Task<IActionResult> Index(
+            string enrollmentSource,
+            double? score,
+            string title,
+            int pageIndex = 1,
+            int pageSize = 10,
+            string sortField = null,
+            string sortOrder = null)
         {
             AddJwtHeader();
 
             var query = HttpUtility.ParseQueryString(string.Empty);
+
             if (!string.IsNullOrEmpty(enrollmentSource)) query["enrollmentSource"] = enrollmentSource;
             if (score.HasValue) query["score"] = score.ToString();
             if (!string.IsNullOrEmpty(title)) query["title"] = title;
+
             query["pageIndex"] = pageIndex.ToString();
             query["pageSize"] = pageSize.ToString();
 
-            var url = $"{_apiBaseUrl}/search?{query}";
+            if (!string.IsNullOrEmpty(sortField)) query["sortField"] = sortField;
+            if (!string.IsNullOrEmpty(sortOrder)) query["sortOrder"] = sortOrder;
+
+            var url = $"{_apiBaseUrl}/?{query}";
 
             var response = await _httpClient.GetAsync(url);
             if (!response.IsSuccessStatusCode)
@@ -58,6 +70,7 @@ namespace DrugPrevention.MVCWebApp.FE.DuyenCTT.Controllers
 
             var json = await response.Content.ReadAsStringAsync();
             var result = JsonConvert.DeserializeObject<PaginationResult<CourseEnrollmentDuyenCtt>>(json);
+
             if (result == null || result.Items == null || !result.Items.Any())
             {
                 TempData["Message"] = "No data";
@@ -68,10 +81,11 @@ namespace DrugPrevention.MVCWebApp.FE.DuyenCTT.Controllers
             ViewBag.TotalPages = result.TotalPages;
             ViewBag.PageSize = result.PageSize;
             ViewBag.SearchParams = new { enrollmentSource, score, title };
+            ViewBag.SortField = sortField;
+            ViewBag.SortOrder = sortOrder;
 
             return View(result.Items);
         }
-
 
         // GET: CourseEnrollmentDuyenCtts/Details/5
         public async Task<IActionResult> Details(int id)

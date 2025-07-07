@@ -15,19 +15,46 @@ namespace DrugPrevention.Repositories.DuyenCTT
     {
         public CourseEnrollmentDuyenCTTRepository() => _context = new SE18_PRN232_SE1731_G2_MaToeContext();
         public CourseEnrollmentDuyenCTTRepository(SE18_PRN232_SE1731_G2_MaToeContext context) => _context = context;
-        public async Task<PaginationResult<CourseEnrollmentDuyenCtt>> GetAllAsync(int pageIndex, int pageSize)
+        public async Task<PaginationResult<CourseEnrollmentDuyenCtt>> GetAllAsync(int pageIndex, int pageSize, string sortField = null, string sortOrder = "asc")
         {
-            var totalItems = await _context.CourseEnrollmentDuyenCtts.CountAsync();
-
-            var items = await _context.CourseEnrollmentDuyenCtts
+            var query = _context.CourseEnrollmentDuyenCtts
                 .Include(ce => ce.Course)
                 .Include(ce => ce.User)
+                .AsQueryable();
+
+            // Apply sorting dynamically
+            if (!string.IsNullOrEmpty(sortField))
+            {
+                bool ascending = sortOrder.ToLower() == "asc";
+
+                query = sortField switch
+                {
+                    "EnrolledAt" => ascending ? query.OrderBy(e => e.EnrolledAt) : query.OrderByDescending(e => e.EnrolledAt),
+                    "Progress" => ascending ? query.OrderBy(e => e.Progress) : query.OrderByDescending(e => e.Progress),
+                    "CompletedAt" => ascending ? query.OrderBy(e => e.CompletedAt) : query.OrderByDescending(e => e.CompletedAt),
+                    "Score" => ascending ? query.OrderBy(e => e.Score) : query.OrderByDescending(e => e.Score),
+                    "CertificateUrl" => ascending ? query.OrderBy(e => e.CertificateUrl) : query.OrderByDescending(e => e.CertificateUrl),
+                    "IsCertified" => ascending ? query.OrderBy(e => e.IsCertified) : query.OrderByDescending(e => e.IsCertified),
+                    "EnrollmentSource" => ascending ? query.OrderBy(e => e.EnrollmentSource) : query.OrderByDescending(e => e.EnrollmentSource),
+                    "Course.Title" => ascending ? query.OrderBy(e => e.Course.Title) : query.OrderByDescending(e => e.Course.Title),
+                    "User.UserId" => ascending ? query.OrderBy(e => e.User.UserId) : query.OrderByDescending(e => e.User.UserId),
+                    _ => query
+                };
+            }
+            Console.WriteLine($"Query: {query.ToQueryString()}");
+
+            var totalItems = await query.CountAsync();
+
+            var items = await query
                 .Skip((pageIndex - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
 
+            Console.WriteLine($"Total Items: {totalItems}, Page Index: {pageIndex}, Page Size: {pageSize}");
+
             return new PaginationResult<CourseEnrollmentDuyenCtt>(items, totalItems, pageIndex, pageSize);
         }
+
 
         public async Task<CourseEnrollmentDuyenCtt> GetByIdAsync(int id)
         {

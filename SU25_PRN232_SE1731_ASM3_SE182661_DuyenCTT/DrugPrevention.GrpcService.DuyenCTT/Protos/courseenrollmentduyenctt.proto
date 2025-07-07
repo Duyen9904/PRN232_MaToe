@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option csharp_namespace = "DrugPrevention.GrpcService.DuyenCTT";
+
+service CourseEnrollmentDuyenCTTGRPC {
+  rpc GetAllAsync (EmptyRequest) returns (CourseEnrollmentDuyenCTTGRPCList);
+  rpc GetByIdAsync (CourseEnrollmentDuyenCTTIdRequest) returns (CourseEnrollmentDuyenCTT);
+  rpc CreateAsync (CourseEnrollmentDuyenCTT) returns (Int32Value);
+  rpc UpdateAsync (CourseEnrollmentDuyenCTT) returns (Int32Value);
+  rpc DeleteAsync (CourseEnrollmentDuyenCTTIdRequest) returns (BoolValue);
+}
+
+message EmptyRequest {}
+
+message CourseEnrollmentDuyenCTTGRPCList {
+  repeated CourseEnrollmentDuyenCTT items = 1;
+}
+
+message CourseEnrollmentDuyenCTT {
+  int32 userId = 1;
+  int32 courseId = 2;
+  string enrolledAt = 3;
+  string completedAt = 4;
+  double score = 5;
+  string certificateUrl = 6;
+  bool isCertified = 7;
+  string enrollmentSource = 8;
+  int32 progress = 9;
+}
+
+
+message CourseEnrollmentDuyenCTTIdRequest {
+  int32 courseEnrollmentDuyenCTTId = 1;
+}
+
+message Int32Value {
+  int32 value = 1;
+}
+
+message BoolValue {
+  bool value = 1;
+}

@@ -1,0 +1,229 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{18D1DF04-8ABD-4E41-9FF0-D0AF8707B637}|CourseEnrollmentDuyenCTT.Microservices.SE182661\\CourseEnrollmentDuyenCTT.Microservices.SE182661.csproj|c:\\duyen_needs\\university\\semester08_summer2025\\prn232\\prn232_matoe\\su25_prn232__se1731_asm5_se182661\\courseenrollmentduyenctt.microservices.se182661\\controllers\\courseenrollmentduyencttcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18D1DF04-8ABD-4E41-9FF0-D0AF8707B637}|CourseEnrollmentDuyenCTT.Microservices.SE182661\\CourseEnrollmentDuyenCTT.Microservices.SE182661.csproj|solutionrelative:courseenrollmentduyenctt.microservices.se182661\\controllers\\courseenrollmentduyencttcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0F77FB5-4E3B-4499-8B5F-5787CC2CFB40}|DrugPrevention.BusinessObject.Shared.Models.SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661.csproj|c:\\duyen_needs\\university\\semester08_summer2025\\prn232\\prn232_matoe\\su25_prn232__se1731_asm5_se182661\\drugprevention.businessobject.shared.models.se182661\\models\\courseenrollmentduyenctt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0F77FB5-4E3B-4499-8B5F-5787CC2CFB40}|DrugPrevention.BusinessObject.Shared.Models.SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661.csproj|solutionrelative:drugprevention.businessobject.shared.models.se182661\\models\\courseenrollmentduyenctt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0F77FB5-4E3B-4499-8B5F-5787CC2CFB40}|DrugPrevention.BusinessObject.Shared.Models.SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661.csproj|c:\\duyen_needs\\university\\semester08_summer2025\\prn232\\prn232_matoe\\su25_prn232__se1731_asm5_se182661\\drugprevention.businessobject.shared.models.se182661\\drugprevention.businessobject.shared.models.se182661.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F0F77FB5-4E3B-4499-8B5F-5787CC2CFB40}|DrugPrevention.BusinessObject.Shared.Models.SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661.csproj|solutionrelative:drugprevention.businessobject.shared.models.se182661\\drugprevention.businessobject.shared.models.se182661.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E29AD70-3CEA-4A06-A8AC-800C67DFBA4B}|DrugPrevetion.Common.Shared.SE182661\\DrugPrevetion.Common.Shared.SE182661.csproj|c:\\duyen_needs\\university\\semester08_summer2025\\prn232\\prn232_matoe\\su25_prn232__se1731_asm5_se182661\\drugprevetion.common.shared.se182661\\drugprevetion.common.shared.se182661.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7E29AD70-3CEA-4A06-A8AC-800C67DFBA4B}|DrugPrevetion.Common.Shared.SE182661\\DrugPrevetion.Common.Shared.SE182661.csproj|solutionrelative:drugprevetion.common.shared.se182661\\drugprevetion.common.shared.se182661.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DADC220-28BD-4D86-9C74-8DC94A5D92FC}|Microservices.CourseDuyenCTT.SE182661\\Microservices.CourseDuyenCTT.SE182661.csproj|c:\\duyen_needs\\university\\semester08_summer2025\\prn232\\prn232_matoe\\su25_prn232__se1731_asm5_se182661\\microservices.courseduyenctt.se182661\\microservices.courseduyenctt.se182661.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5DADC220-28BD-4D86-9C74-8DC94A5D92FC}|Microservices.CourseDuyenCTT.SE182661\\Microservices.CourseDuyenCTT.SE182661.csproj|solutionrelative:microservices.courseduyenctt.se182661\\microservices.courseduyenctt.se182661.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18D1DF04-8ABD-4E41-9FF0-D0AF8707B637}|CourseEnrollmentDuyenCTT.Microservices.SE182661\\CourseEnrollmentDuyenCTT.Microservices.SE182661.csproj|c:\\duyen_needs\\university\\semester08_summer2025\\prn232\\prn232_matoe\\su25_prn232__se1731_asm5_se182661\\courseenrollmentduyenctt.microservices.se182661\\courseenrollmentduyenctt.microservices.se182661.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{18D1DF04-8ABD-4E41-9FF0-D0AF8707B637}|CourseEnrollmentDuyenCTT.Microservices.SE182661\\CourseEnrollmentDuyenCTT.Microservices.SE182661.csproj|solutionrelative:courseenrollmentduyenctt.microservices.se182661\\courseenrollmentduyenctt.microservices.se182661.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E29AD70-3CEA-4A06-A8AC-800C67DFBA4B}|DrugPrevetion.Common.Shared.SE182661\\DrugPrevetion.Common.Shared.SE182661.csproj|c:\\duyen_needs\\university\\semester08_summer2025\\prn232\\prn232_matoe\\su25_prn232__se1731_asm5_se182661\\drugprevetion.common.shared.se182661\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E29AD70-3CEA-4A06-A8AC-800C67DFBA4B}|DrugPrevetion.Common.Shared.SE182661\\DrugPrevetion.Common.Shared.SE182661.csproj|solutionrelative:drugprevetion.common.shared.se182661\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0F77FB5-4E3B-4499-8B5F-5787CC2CFB40}|DrugPrevention.BusinessObject.Shared.Models.SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661.csproj|c:\\duyen_needs\\university\\semester08_summer2025\\prn232\\prn232_matoe\\su25_prn232__se1731_asm5_se182661\\drugprevention.businessobject.shared.models.se182661\\models\\courseduyenctt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0F77FB5-4E3B-4499-8B5F-5787CC2CFB40}|DrugPrevention.BusinessObject.Shared.Models.SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661.csproj|solutionrelative:drugprevention.businessobject.shared.models.se182661\\models\\courseduyenctt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0F77FB5-4E3B-4499-8B5F-5787CC2CFB40}|DrugPrevention.BusinessObject.Shared.Models.SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661.csproj|c:\\duyen_needs\\university\\semester08_summer2025\\prn232\\prn232_matoe\\su25_prn232__se1731_asm5_se182661\\drugprevention.businessobject.shared.models.se182661\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0F77FB5-4E3B-4499-8B5F-5787CC2CFB40}|DrugPrevention.BusinessObject.Shared.Models.SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661.csproj|solutionrelative:drugprevention.businessobject.shared.models.se182661\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 15,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:155:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{26341fe2-71dd-46fd-bb1b-2e51a92a0d64}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DrugPrevention.BusinessObject.Shared.Models.SE182661",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661.csproj",
+              "RelativeDocumentMoniker": "DrugPrevention.BusinessObject.Shared.Models.SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661.csproj",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661.csproj",
+              "RelativeToolTip": "DrugPrevention.BusinessObject.Shared.Models.SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-04T07:43:45.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CourseEnrollmentDuyenCTTController.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\CourseEnrollmentDuyenCTT.Microservices.SE182661\\Controllers\\CourseEnrollmentDuyenCTTController.cs",
+              "RelativeDocumentMoniker": "CourseEnrollmentDuyenCTT.Microservices.SE182661\\Controllers\\CourseEnrollmentDuyenCTTController.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\CourseEnrollmentDuyenCTT.Microservices.SE182661\\Controllers\\CourseEnrollmentDuyenCTTController.cs",
+              "RelativeToolTip": "CourseEnrollmentDuyenCTT.Microservices.SE182661\\Controllers\\CourseEnrollmentDuyenCTTController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T07:42:14.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Microservices.CourseDuyenCTT.SE182661",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\Microservices.CourseDuyenCTT.SE182661\\Microservices.CourseDuyenCTT.SE182661.csproj",
+              "RelativeDocumentMoniker": "Microservices.CourseDuyenCTT.SE182661\\Microservices.CourseDuyenCTT.SE182661.csproj",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\Microservices.CourseDuyenCTT.SE182661\\Microservices.CourseDuyenCTT.SE182661.csproj",
+              "RelativeToolTip": "Microservices.CourseDuyenCTT.SE182661\\Microservices.CourseDuyenCTT.SE182661.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-04T07:38:55.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CourseEnrollmentDuyenCtt.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661\\Models\\CourseEnrollmentDuyenCtt.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.BusinessObject.Shared.Models.SE182661\\Models\\CourseEnrollmentDuyenCtt.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661\\Models\\CourseEnrollmentDuyenCtt.cs",
+              "RelativeToolTip": "DrugPrevention.BusinessObject.Shared.Models.SE182661\\Models\\CourseEnrollmentDuyenCtt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T07:23:55.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CourseEnrollmentDuyenCTT.Microservices.SE182661",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\CourseEnrollmentDuyenCTT.Microservices.SE182661\\CourseEnrollmentDuyenCTT.Microservices.SE182661.csproj",
+              "RelativeDocumentMoniker": "CourseEnrollmentDuyenCTT.Microservices.SE182661\\CourseEnrollmentDuyenCTT.Microservices.SE182661.csproj",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\CourseEnrollmentDuyenCTT.Microservices.SE182661\\CourseEnrollmentDuyenCTT.Microservices.SE182661.csproj",
+              "RelativeToolTip": "CourseEnrollmentDuyenCTT.Microservices.SE182661\\CourseEnrollmentDuyenCTT.Microservices.SE182661.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-04T07:38:33.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Utilities.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\DrugPrevetion.Common.Shared.SE182661\\Utilities.cs",
+              "RelativeDocumentMoniker": "DrugPrevetion.Common.Shared.SE182661\\Utilities.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\DrugPrevetion.Common.Shared.SE182661\\Utilities.cs",
+              "RelativeToolTip": "DrugPrevetion.Common.Shared.SE182661\\Utilities.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBoAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T07:28:09.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DrugPrevetion.Common.Shared.SE182661",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\DrugPrevetion.Common.Shared.SE182661\\DrugPrevetion.Common.Shared.SE182661.csproj",
+              "RelativeDocumentMoniker": "DrugPrevetion.Common.Shared.SE182661\\DrugPrevetion.Common.Shared.SE182661.csproj",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\DrugPrevetion.Common.Shared.SE182661\\DrugPrevetion.Common.Shared.SE182661.csproj",
+              "RelativeToolTip": "DrugPrevetion.Common.Shared.SE182661\\DrugPrevetion.Common.Shared.SE182661.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-04T07:27:56.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CourseDuyenCtt.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661\\Models\\CourseDuyenCtt.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.BusinessObject.Shared.Models.SE182661\\Models\\CourseDuyenCtt.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661\\Models\\CourseDuyenCtt.cs",
+              "RelativeToolTip": "DrugPrevention.BusinessObject.Shared.Models.SE182661\\Models\\CourseDuyenCtt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T07:23:28.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661\\Class1.cs",
+              "RelativeDocumentMoniker": "DrugPrevention.BusinessObject.Shared.Models.SE182661\\Class1.cs",
+              "ToolTip": "C:\\Duyen_needs\\University\\Semester08_Summer2025\\PRN232\\PRN232_MaToe\\SU25_PRN232__SE1731_ASM5_SE182661\\DrugPrevention.BusinessObject.Shared.Models.SE182661\\Class1.cs",
+              "RelativeToolTip": "DrugPrevention.BusinessObject.Shared.Models.SE182661\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T07:14:13.753Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

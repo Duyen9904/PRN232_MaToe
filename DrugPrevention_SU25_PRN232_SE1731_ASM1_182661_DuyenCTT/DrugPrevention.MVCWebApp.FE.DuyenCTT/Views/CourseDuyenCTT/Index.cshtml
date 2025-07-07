@@ -6,40 +6,117 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div class="">
+    <button type="button" class="btn btn-primary" onclick="addNew()">
+        Add
+    </button>
+</div>
 
-<!-- Razor-rendered Course Table -->
-<table class="table">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Target Group</th>
-            <th>Is Active</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.CourseDuyenCttid</td>
-                <td>@item.Title</td>
-                <td>@item.Description</td>
-                <td>@item.TargetGroup</td>
-                <td>@(item.IsActive.HasValue ? (item.IsActive.Value ? "Yes" : "No") : "N/A")</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.CourseDuyenCttid">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.CourseDuyenCttid">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.CourseDuyenCttid">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="modal" id="enrollmentModal" tabindex="-1" aria-labelledby="enrollmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            @using (Html.BeginForm(null, null, FormMethod.Post, new { name = "frmEnrollment", id = "frmEnrollment" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title" id="enrollmentModalLabel">Course Enrollment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="EnrollmentDuyenCttid" name="EnrollmentDuyenCttid" value="0" />
+
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label for="UserId">User ID</label>
+                            <input type="number" id="UserId" name="UserId" class="form-control" />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="CourseId">Course ID</label>
+                            <input type="number" id="CourseId" name="CourseId" class="form-control" />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="EnrolledAt">Enrolled At</label>
+                            <input type="datetime-local" id="EnrolledAt" name="EnrolledAt" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label for="Progress">Progress (%)</label>
+                            <input type="number" id="Progress" name="Progress" class="form-control" />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="CompletedAt">Completed At</label>
+                            <input type="datetime-local" id="CompletedAt" name="CompletedAt" class="form-control" />
+                        </div>
+                        <div class="col-md-4">
+                            <label for="Score">Score</label>
+                            <input type="number" step="0.01" id="Score" name="Score" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="CertificateUrl">Certificate URL</label>
+                            <input type="text" id="CertificateUrl" name="CertificateUrl" class="form-control" />
+                        </div>
+                        <div class="col-md-3">
+                            <label for="IsCertified">Is Certified</label><br />
+                            <input type="checkbox" id="IsCertified" name="IsCertified" class="form-check-input" />
+                        </div>
+                        <div class="col-md-3">
+                            <label for="EnrollmentSource">Enrollment Source</label>
+                            <input type="text" id="EnrollmentSource" name="EnrollmentSource" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button id="btSave" type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Confirm Delete Modal -->
+<div class="modal" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this course?
+                <input type="hidden" id="deleteCourseId" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="deleteCourse()">Delete</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+//course detail
+<div class="modal" id="viewCourseModal" tabindex="-1" aria-labelledby="viewCourseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Course Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Title:</strong> <span id="detailTitle"></span></p>
+                <p><strong>Description:</strong> <span id="detailDescription"></span></p>
+                <p><strong>Target Group:</strong> <span id="detailTargetGroup"></span></p>
+                <p><strong>Active:</strong> <span id="detailIsActive"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <hr />
@@ -96,7 +173,9 @@
                         html += '<td>' + item.description + '</td>';
                         html += '<td>' + item.targetGroup + '</td>';
                         html += '<td>' + (item.isActive === true ? 'Yes' : item.isActive === false ? 'No' : 'N/A') + '</td>';
-                        html += '<td><button class="btn btn-sm btn-info" onclick="viewCourse(' + item.courseDuyenCttid + ')">View</button></td>';
+                                html += '<td><button class="btn btn-sm btn-info" onclick="viewCourse(' + item.courseDuyenCttid + ')">View</button> ';
+        html += '<button class="btn btn-sm btn-danger" onclick="confirmDelete(' + item.courseDuyenCttid + ')">Delete</button></td>';
+
                         html += '</tr>';
                     });
                     $('.tblCoursesBody').html(html);
@@ -107,10 +186,114 @@
             });
         }
 
-        function viewCourse(id) {
-            alert("View course with ID: " + id);
-            // Optionally redirect:
-            // window.location.href = '/Courses/Details/' + id;
+        function addNew() {
+                  var token = getCookie("TokenString");
+        $("#enrollmentModalLabel").html("Add New");
+        $('#enrollmentModal').modal('show');
+                    $("#btSave").click(function () {
+            //alert("Save in progress");
+            $.ajax({
+                type: 'POST',
+                url: 'https://localhost:7075/api/CategoryBanks',
+                headers: {
+                    'Accept': 'text/plain',
+                    'Content-Type': 'application/json; charset=utf-8'
+                    ////  VuLNS | Save stoken string to LocalStorage
+                    //authorization: "Bearer ..."
+                },
+                beforeSend: function (xhr) {
+                    if (token) {
+                        xhr.setRequestHeader("Authorization", "Bearer " + token);
+                    }
+                },
+                data: JSON.stringify({
+                    bankId: 0,
+                    code: $("#code").val(),
+                    fullName: $("#fullName").val(),
+                    shortName: $("#shortName").val(),
+                    address: $("#address").val(),
+                    phone: $("#phone").val(),
+                    fax: $("#fax").val(),
+                    logoUrl: $("#logoUrl").val(),
+                    isActive: $("#isActive").val() === "on" ? true : false,
+                    requestCode: $("#requestCode").val(),
+                    applicationCode: $("#applicationCode").val(),
+                    createdDate: $("#createdDate").val(),
+                    createdBy: $("#createdBy").val(),
+                    modifiedDate: $("#modifiedDate").val(),
+                    modifiedBy: $("#modifiedBy").val(),
+                }),
+                success: function (result) {
+                    //console.log(result);
+                    if (result > 0) {
+                        //// VuLNS | If save success then close Popup and Re-load data list
+                        $('#bankModal').modal('hide');
+                        loadData();
+                    }
+                },
+                error: function (xhr, error) {
+                    alert(xhr.responseText);
+                    console.log(xhr);
+                }
+            });
+        });
         }
+
+
+
+             function viewCourse(id) {
+            const token = getCookie("TokenString");
+
+            $.ajax({
+                url: `https://localhost:7003/api/courses/${id}`,
+                type: "GET",
+                dataType: "json",
+                beforeSend: function (xhr) {
+                    if (token) {
+                        xhr.setRequestHeader("Authorization", "Bearer " + token);
+                    }
+                },
+                success: function (data) {
+                    $('#detailTitle').text(data.title);
+                    $('#detailDescription').text(data.description);
+                    $('#detailTargetGroup').text(data.targetGroup);
+                    $('#detailIsActive').text(data.isActive ? "Yes" : "No");
+                    $('#viewCourseModal').modal('show');
+                },
+                error: function () {
+                    alert("Error fetching course details.");
+                }
+            });
+        }
+
+
+                function confirmDelete(id) {
+            $('#deleteCourseId').val(id);
+            $('#deleteConfirmModal').modal('show');
+        }
+
+        function deleteCourse() {
+            const id = $('#deleteCourseId').val();
+            const token = getCookie("TokenString");
+
+            $.ajax({
+                url: `https://localhost:7003/api/courses/${id}`,
+                type: "DELETE",
+                beforeSend: function (xhr) {
+                    if (token) {
+                        xhr.setRequestHeader("Authorization", "Bearer " + token);
+                    }
+                },
+                success: function () {
+                    $('#deleteConfirmModal').modal('hide');
+                    alert("Course deleted successfully!");
+                    loadCourses();
+                },
+                error: function (xhr) {
+                    alert("Error deleting course: " + xhr.responseText);
+                }
+            });
+        }
+
     </script>
 }

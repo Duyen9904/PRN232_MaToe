@@ -1,0 +1,6 @@
+@Microservices.CourseDuyenCTT.SE182661_HostAddress = http://localhost:5087
+
+GET {{Microservices.CourseDuyenCTT.SE182661_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

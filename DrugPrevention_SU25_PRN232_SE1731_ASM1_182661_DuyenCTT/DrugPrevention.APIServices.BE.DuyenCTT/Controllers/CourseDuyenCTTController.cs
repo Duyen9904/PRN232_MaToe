@@ -3,6 +3,7 @@ using DrugPrevention.APIServices.BE.DuyenCTT.Mappers;
 using DrugPrevention.Services.DuyenCTT;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 
 namespace DrugPrevention.APIServices.BE.DuyenCTT.Controllers
 {
@@ -82,6 +83,16 @@ namespace DrugPrevention.APIServices.BE.DuyenCTT.Controllers
                 return NotFound();
 
             return Ok();
+        }
+
+        [HttpGet("search")]
+        [Authorize(Roles = "1,2")]
+        [EnableQuery]
+        public async Task<IActionResult> SearchCourses()
+        {
+            var courses = await _courseService.GetAllAsync();
+            var courseDtos = courses.Select(c => c.ToDto()).ToList();
+            return Ok(courseDtos);
         }
     }
 }

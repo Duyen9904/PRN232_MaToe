@@ -268,3 +268,21 @@ CREATE TABLE ProgramSurvey (
     Type NVARCHAR(50) -- Pre or Post
 );
 
+
+
+  {
+      "id": "6854bbece8152822a2e737fe",
+      "content": [
+        "Vladimir Lenin's political theory, often referred to as ",
+        "",
+        ", adapted Marxist ideas to the conditions of early 20th-century Russia, emphasizing the role of a disciplined revolutionary party."
+      ],
+      "type": "FILL_IN_THE_BLANK",
+      "wordsAnswer": [
+        "Leninism"
+      ],
+      "wordsExplanation": "Vladimir Lenin's political theory is known as **Leninism**. It is an adaptation and extension of Marxist theory, emphasizing the practical implementation of revolutionary change through a centralized, disciplined vanguard party, particularly in the context of a less industrialized society like early 20th-century Russia.\n",
+      "difficultyLevel": 2,
+      "points": 2,
+      "isActive": true
+    },
